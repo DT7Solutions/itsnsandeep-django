@@ -1,0 +1,31 @@
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+
+      <div class="unslate_co--section unslate_co--site-inner bg-dark mt-5" id="blog-single-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-12 blog-body">
+              
+              {% if blog_posts %}
+              <img src="{{ blog_posts.Image1.url }}" alt="" class="img-fluid mt-5">
+              <h3 class="mb-4 text-light pt-3 gsap-reveal">{{blog_posts.Second_title}}</h3>
+              <p class="text-light">{{blog_posts.Body|safe}}</p>
+
+              <div class="pt-5 categories_tags ">
+                <p>Categories: <a href="#">{{blog_posts.category}}</a>,  Tags: <a href="#">{{blog_posts.tag}}</a></p>
+              </div>
+              {% endif %}
+              
+            </div>
+            <div class="blogs-btn">
+              <a href="/blogs/"><button class="btn btn-danger mt-4">Return To Blogs</button></a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      </div>
+{% endblock %}

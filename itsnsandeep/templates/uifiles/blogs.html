@@ -1,0 +1,47 @@
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="unslate_co--section unslate_co--site-inner" id="journal-section">
+  <div class="container">
+    <div class="section-heading-wrap text-center mb-5">
+      <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Blogs</span></h2>
+      <span class="gsap-reveal"><img src="{% static 'assets/images/divider.png' %}" alt="divider" width="76"></span>
+    </div>
+
+    
+    <div class="row gutter-v4 align-items-stretch">
+  
+      {% for blog_info in blog_items %}
+      <div class="col-sm-6 col-md-4 col-lg-4 blog-post-entry" data-aos="fade-up" data-aos-delay="0">
+        <a href="/blog-details/{{blog_info.Sluglink}}" class="grid-item blog-item w-100 h-100" >
+          <div class="overlay">
+            <div class="portfolio-item-content bolog-card">
+              <h3 style="color:#D63447;  font-weight:600;">{{blog_info.First_title}}</h3>
+              <p class="post-meta"  style="color:#D63447;">{{blog_info.Name}}<span class="small"> &bullet;  {{blog_info.Create_at}}</span></p>
+            </div>
+          </div>
+          <img src="{{blog_info.Image1.url}}" class="lazyload" alt="Image" />
+        </a>
+      </div>
+      {% endfor %}
+
+            <nav aria-label="Page navigation conatiner">
+              <ul class="pagination justify-content-center">
+              
+                  <!-- <li><a href="?page={{ post.previous_page_number }}" class="page-link" >&laquo; PREV </a></li>
+                
+                  <li><a href="?page={{ post.next_page_number }}" class="page-link"> NEXT &raquo;</a></li> -->
+        
+              </ul>
+            </nav>
+    </div>
+    <div class="blogs-btn">
+      <a href="/"><button class="btn btn-danger mt-4">Back To Home</button></a>
+    </div>
+  </div>
+</div>
+
+<!-- END blog posts -->
+
+{% endblock %}

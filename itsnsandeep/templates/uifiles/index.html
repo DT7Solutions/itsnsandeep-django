@@ -1,0 +1,796 @@
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content%}
+<!---banner image -->
+{% if oBanner %}
+      <div class="cover-v1  overlay" style="background-image: url({{oBanner.Image.url}})" id="home-section">
+        <div class="container">
+          <div class="row align-items-center">
+              
+            <!-- <div class="col-md-7 mx-auto text-center">
+              <h2 class="heading gsap-reveal-hero text-white">Kingmakers of your journey to greatness</h2>
+              <h3 class="subheading gsap-reveal-hero text-white">Helping brands turn bigger and making personalities popular</h3>
+            </div> -->
+
+          </div>
+        </div>
+   
+
+        <!-- dov -->
+        <a href="#portfolio-section" class="mouse-wrap smoothscroll">
+          <span class="mouse">
+            <span class="scroll"></span>
+          </span>
+          <span class="mouse-label">Scroll</span>
+        </a>
+
+      </div>
+      {% endif %}
+      <!-- END .cover-v1 -->
+
+
+
+      <div class="unslate_co--section" id="portfolio-section">
+        <div class="container">
+          
+          
+          <div class="relative"><div class="loader-portfolio-wrap"><div class="loader-portfolio dark"></div></div> </div>
+          <div id="portfolio-single-holder"></div>
+
+          <div class="portfolio-wrapper">
+
+            <div class="section-heading-wrap text-center mb-5">
+              <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Portfolio</span></h2>
+              <span class="gsap-reveal"><img src="{% static 'assets/images/divider.png' %}" alt="divider" width="76"></span>
+            </div>
+
+
+            
+            <div id="posts" class="row gutter-isotope-item">
+              
+              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="portfolio-single-3.html" class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>"CEO & Business Owner Personal Branding"</h3>
+                        <p>Build your personal brand</p>
+                      </div>
+                    </div>
+                    <img src="{% static 'assets/media/uploads/itsnsandeep-business-owners.png' %}" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+
+              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="portfolio-single-3.html" class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>"Celebpreneur Transformation"</h3>
+                        <p>Lets you brand bigger with right plan</p>
+                      </div>
+                    </div>
+                    <img src="{% static 'assets/media/uploads/itsnsandeep-celebprenenur-transformation_11zon.jpg' %}" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+
+              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="portfolio-single-3.html" class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>"Corporate Workshops"</h3>
+                        <p>Bill you image to reach you mark</p>
+                      </div>
+                    </div>
+                    <img src="{% static 'assets/media/uploads/tsnsandeep-corporate-solutions-personal-branding-mastery-workshops-for-corporate-success_11zon.jpg' %}" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+
+              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
+                <a href="portfolio-single-3.html" class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
+                    <div class="overlay">
+                      <span class="wrap-icon icon-link2"></span>
+                      <div class="portfolio-item-content">
+                        <h3>"Educational Institutions Workshops"</h3>
+                        <p>Build a brand with you the personal banding</p>
+                      </div>
+                    </div>
+                    <img src="{% static 'assets/media/uploads/itsnsandeep-educational-institutions.jpg' %}" class="lazyload  img-fluid" alt="Images" />
+                  </a>
+              </div>
+            </div>
+            
+          </div>
+
+
+        </div>
+      </div>
+
+
+<!-- =====================================     logo sandeep-banner     ========================= -->
+      <!-- <div class="unslate_co--section">
+        <div class="container">
+         
+            <div class="logo-v1 gsap-reveal d-flex justify-content-center align-items-center">
+              
+              <img src="assets/media/uploads/itsnsandeep-sandeep-black-logo.png" alt="Image" class="img-fluid" width="100px" height="50px">
+           
+            </div>
+         
+        </div>
+      </div> -->
+
+<!-- =====================================     about section       ========================= -->
+      <div class="unslate_co--section" id="about-section">
+        <div class="container">
+      
+          <div class="section-heading-wrap text-center mb-5">
+            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">About Me</span></h2>
+            <span class="gsap-reveal"><img src="{% static 'assets/images/divider.png' %}" alt="divider" width="76"></span>
+          </div>
+      
+      
+         
+          <div class="row mt-5 justify-content-between">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <figure class="dotted-bg gsap-reveal-img ">
+                <img src="{% static 'assets/media/uploads/sandeep.jpeg' %}" alt="Image" class="img-fluid">
+              </figure>
+            </div>
+            <div class="col-lg-6 pr-lg-5">
+              <h3 class="mb-4 heading-h3"><span class="gsap-reveal">The Alchemist of Personal Brands: Sandeep N's Magical Touch</span></h3>
+              <p class="lead" style="text-align: justify;">With nearly 7 years of extensive research & experience, Sandeep is a trusted name in brand consulting. As
+                the founder of Magsmen, he has earned accolades for his creative strategies and unparalleled efficiency.
+                Working with top-tier organizations, Sandeep has left indelible impressions on customers and fueled business
+                growth. With expertise spanning industries, he delivers impactful brand strategies for technology, FMCG,
+                retail, and more. In addition, Sandeep collaborated with TFI celebrities, conducts training sessions for
+                corporates, employees, and educational institutions. A visionary leader, Sandeep's unwavering commitment
+                and remarkable track record make him a true powerhouse in brand consulting.</p>
+              <!-- <p class="gsap-reveal"><a href="#" class="btn btn-outline-pill btn-custom-light">Know More</a></p> -->
+            </div>
+          </div>
+         
+      
+        </div>
+      </div>
+  <!-- =====================================     whysandeep       ========================= -->
+  <div class="unslate_co--section whysandeep-counter" id="skills-section">
+    <div class="container">
+      <div class=" mb-5 " style="display:flex;flex-direction: column;align-items: center;">
+        <h2 class="heading-h2 text-center " style="color: whitesmoke;"><span class="gsap-reveal " >Why Sandeep</span></h2>
+        <span class="gsap-reveal"><img src="{% static 'assets/images/white-divider.png' %}" alt="divider" width="76"></span>
+      </div>
+      <div class="row pb-2">
+        <div class="col-12 col-sm-12 mb-5 mb-lg-0 col-md-12 col-lg-12 d-flex flex-column justify-content-lg-center align-items-lg-center"  data-aos="fade-up" data-aos-delay="300">
+          <div class="counter-v1 text-center">
+            <li style="color:rgb(252, 250, 250); text-align:justify;" > Expertise in personal branding to help individuals stand out in a saturated market.</li>
+            <li style="color:rgb(252, 250, 250); text-align:justify;"> Deep understanding of personal branding for people of all ages, from 15 years old to 70.</li>
+            <li style="color:rgb(252, 250, 250); text-align:justify;" > Focus on unlocking doors of opportunity and gaining influence as an influential leader.</li>
+            <li style="color:rgb(252, 250, 250); text-align:justify;" > Support in becoming an "opportunity magnet" through strategic personal branding.</li>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- END .linked in -->
+<!-- =====================================     service  section       ========================= -->
+
+      <div class="unslate_co--section" id="services">
+        <div class="container">
+
+          <div class="section-heading-wrap text-center mb-5">
+            <h2 class="heading-h2 text-center divider">Individual Solutions</h2>
+            <img src="{% static 'assets/images/divider.png' %}" alt="divider" width="100">
+            <h2>Transforming Individuals into Powerful Brands</h2>
+          </div>
+
+          <div class="row  ">
+            <div class="col-md-6 col-lg-6   " >
+              <div class="feature-v1 shadow mb-4 p-4 mb-5  bg-white rounded " data-aos="fade-up" data-aos-delay="0">
+                <!-- <div class="wrap-icon mb-3">
+                  <img src="assets/images/svg/itsnsandeep-appearance-management-svg.svg" alt="Image" width="45">
+                </div> -->
+                <div>
+                  <h3>CEO & Business Owner Personal Branding:</h3>
+                  <ul class="men-list">
+                    <li >Module 1: Creating Your Executive Brand:</li>
+                    <li >Module 2: Crafting a Compelling Personal Brand Strategy</li>
+                    <li >Module 3: Reputation Management: Building Trust and Credibility</li>
+                    <li >Module 4: Crisis Communication: Leading Through Times of Challenge</li>
+                    <li>Module 5: Executive Networking: Cultivating Meaningful Connections</li>
+                    <li>Module 6: Building Strategic Partnerships: Collaborating for Success</li>
+                    <li>Module 7: Thought Leadership: Positioning Yourself as an Industry Expert</li>
+                  
+                  </ul>
+                 
+                  <div class="widget-49-meeting-action">
+                    <a href="/ceo-and-business-personal-branding/" class="btn btn-sm btn-flash-border-success">Read More</a>
+                </div>
+                </div>
+                
+              </div> 
+            </div>
+           
+            <div class="col-md-6 col-lg-6 ">
+              <div class="feature-v1 shadow p-4 mb-5 bg-white rounded " data-aos="fade-up" data-aos-delay="200">
+                <!-- <div class="wrap-icon mb-3">
+                  <img src="assets/images/svg/itsnsandeep-behavoiural-skills-svg.svg" alt="Image" class="img-fluid" width="45">
+                </div> -->
+                <div>
+                  <h3>Celebpreneur Transformation:</h3>
+                  <ul class="men-list">
+                    <li>Module 1: Transitioning Your Personal Brand</li>
+                    <li>Module 2: Building a Strategic Business Plan</li>
+                    <li>Module 3: Branding Beyond Fame</li>
+                    <li>Module 4: Marketing and Digital Presence</li>
+                    <li>Module 5: Revenue Generation and Monetization:</li>
+                   
+                  </ul>
+                  <div class="widget-49-meeting-action">
+                    <a href="/celebprenenur-transformation/" class="btn btn-sm btn-flash-border-success">Read More</a>
+                </div>
+                </div>
+              </div> 
+            </div>
+         
+
+
+          <!-- <div class="section-heading-wrap text-center mb-5">
+            <h2 class="heading-h2 text-center divider">Women</h2>
+            <img src="assets/images/divider.png" alt="divider" width="76">
+          </div> -->
+
+          <!-- <div class="row gutter-v3"> -->
+            <div class="col-md-6 col-lg-6 ">
+              <div class="feature-v1  shadow mb-4 p-4 mb-5 bg-white rounded" data-aos="fade-up" data-aos-delay="0">
+                <!-- <div class="wrap-icon mb-3">
+                  <img src="assets/images/svg/itsnsandeep-appearance-management-svg.svg" alt="Image" width="45">
+                </div> -->
+                <div>
+                  <h3>Educational institutions</h3>
+                  <ul class="men-list">
+                    <li>Time Management</li>
+                    <li>Stress Management</li>
+                    <li>Assertiveness and Self-Confidence</li>
+                    <li>Public Speaking</li>
+                    <li>Presentation Skills</li>
+                    <li>Dressing: Presenting Yourself Professionally</li>
+                    <li>Basic Etiquette: Navigating Social Interactions with Grace</li>
+                    <li>Body Language: The Art of Non-Verbal Communication</li>
+                    <li>Digital Citizenship: Navigating the Digital World Safely</li>
+                  </ul>
+                  <div class="widget-49-meeting-action">
+                    <a href="/educational-institutions/" class="btn btn-sm btn-flash-border-success">Read More</a>
+                </div>
+                </div>
+                
+              </div> 
+            </div>
+            <div class="col-md-6 col-lg-6 ">
+              <div class="feature-v1 shadow mb-4 p-4 mb-5 bg-white rounded" data-aos="fade-up" data-aos-delay="100">
+                <!-- <div class="wrap-icon mb-3">
+                  <img src="assets/images/svg/itsnsandeep-affective-communication-svg.svg" alt="Icon" width="45">
+                </div> -->
+                <div>
+                  <h3>Corporate solutions: Personal Branding Mastery Workshops for Corporate Success</h3>
+                  <ul class="men-list">
+                    <li>Module 1: "Crafting Your Personal Brand: Building a Strong Foundation"</li>
+                    <li>Module 2: "Leveraging Social Media for Personal Branding Success"</li>
+                    <li>Module 3: "Dress for Success: Elevating Your Professional Image"</li>
+                    <li>Module 4: "Mastering Executive Presence: Commanding Respect and Influence"
+                    </li>
+                    <li>Module 5: "Personal Branding for Leadership Success"</li>
+                    <li>Module 6: "Building a Winning Online Reputation: Managing Your Digital Footprint"
+                    </li>
+                    <li>Module 7: "Effective Networking and Personal Branding: Maximizing Connections"</li>
+                 
+                  </ul>
+                  <div class="widget-49-meeting-action">
+                    <a href="/corporate-solutions-personal-branding/" class="btn btn-sm btn-flash-border-success">Read More</a>
+                </div>
+                </div>
+              </div> 
+            </div>
+         
+          <!-- </div> -->
+        </div>
+        </div>
+      </div>
+<!-- fqs section -->
+<div class="unslate_co--section whysandeep-counter" id="skills-section">
+  <div class="container">
+    <!-- <h2 class="text-center text-light mb-3">10 Reasons why your personal brand matters at your organisation/workplace</h2> -->
+    <h2 class="heading-h2 text-center text-white divider"><span class="gsap-reveal">10 Reasons why your personal brand matters at your Organisation/workplace</span></h2>
+    <p class="text-light text-center">Join our Personal Branding Mastery Workshops and unlock your true potential in today's corporate world.
+      Empower yourself with the skills and strategies needed to elevate your professional image, stand out from the
+      competition, and propel your career to new heights</p>
+     
+   
+    <div class="row pb-2">
+     
+        <div class="col-lg-6  wow" data-wow-delay="0.6s">
+          <div id="accordion" class="myaccordion w-100 mb-5 mt-5" aria-multiselectable="true">
+            <div class="card m-2 shadow" data-aos="fade-right" data-aos-duration="1000">
+              <div class="card-header p-0" id="headingOne">
+                <h2 class="mb-0">
+                  <button href="#collapseOne"
+                    class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed"
+                    data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseOne">
+                    <p class="mb-0 question" style="color:#f4f8fa; font-weight:600;">Reason 1
+                     </p>
+                    <i class="fa" aria-hidden="true" style="color:#006d95;"></i>
+                  </button>
+                </h2>
+              </div>
+              <div class="collapse" id="collapseOne" role="tabpanel" aria-labelledby="headingOne">
+                <div class="card-body py-3 px-0">
+                  <p class="px-4" style="text-align: justify; font-size:16px; word-spacing: normal;">
+  
+                  <ol>
+                    <li style="list-style-type:none;">
+                      <h6   style="font-weight:550">Why settle for a mediocre first impression?</h6>
+                      <p style="text-align: justify;  word-spacing: normal;">In just a few seconds, people form lasting opinions about you based on their initial encounter
+                      </p>
+                    </li>
+                   
+                   
+  
+                  </ol>
+                  </p>
+  
+                 
+                </div>
+              </div>
+            </div>
+  
+            <div class="card m-2 shadow" data-aos="fade-right" data-aos-duration="1500">
+              <div class="card-header p-0" id="headingTwo" role="tab">
+                <h2 class="mb-0">
+                  <button href="#collapseTwo"
+                    class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed"
+                    data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+                    <p class="mb-0 question" style="color:#f4f8fa; font-weight:600;text-align: justify;">Reason 2</p>
+                    <i class="fa" aria-hidden="true" style="color:#006d95;"></i>
+                  </button>
+                </h2>
+              </div>
+              <div class="collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="card-body py-3 px-0">
+                  <h6  class="px-4" style="font-weight:550;">Are you confident in the first impression you make on others?</h6>
+                  <p class="px-4" style="text-align: justify;  word-spacing: normal;">
+                    Your reputation shapes your path."
+                    Your reputation has far-reaching consequences, not only for yourself but also for those who are associated
+                    with you
+                  </p>
+  
+                </div>
+              </div>
+            </div>
+  
+            <div class="card m-2 shadow" data-aos="fade-right" data-aos-duration="2000">
+              <div class="card-header p-0" id="headingThree" role="tab">
+                <h2 class="mb-0">
+                  <button href="#collapseThree"
+                    class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed"
+                    data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="collapseThree">
+                    <p class="mb-0 question" style="color:#f4f8fa; font-weight:600;">Reason 3</p>
+                    <i class="fa" aria-hidden="true" style="color:#006d95;"></i>
+                  </button>
+                </h2>
+              </div>
+              <div class="collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="card-body py-3 px-0">
+                  <h6 class="px-4" style="font-weight:550;">What does your reputation say about you?</h6>
+                  <p class="px-4" style="text-align: justify; font-weight:500; word-spacing: normal;">
+                    The strength of your network drives your success."
+                    Your business opportunities are directly influenced by the relationships you cultivate with others.
+                  </p>
+  
+                </div>
+              </div>
+            </div>
+  
+            <div class="card m-2 shadow" data-aos="fade-right" data-aos-duration="2500">
+              <div class="card-header p-0" id="headingFour" role="tab">
+                <h2 class="mb-0">
+                  <button href="#collapseFour"
+                    class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed"
+                    data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="collapseFour">
+                    <p class="mb-0 question" style="color:#f4f8fa; font-weight:600;">Reason 4</p>
+                    <i class="fa" aria-hidden="true" style="color:#006d95;"></i>
+                  </button>
+                </h2>
+              </div>
+              <div class="collapse" id="collapseFour" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="card-body py-3 px-0">
+                  <h6   class="px-4" style="font-weight:550;text-align: justify; ">What do your customers or clients say about your team and employees?</h6>
+                  <p class="px-4" style="text-align: justify; font-weight:500; word-spacing: normal;">
+                    Craft your narrative,
+  control your perception."
+  When you strategically shape your personal brand, you have the power to shape how others perceive you.
+                  </p>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card m-2 shadow" data-aos="fade-right" data-aos-duration="2000">
+              <div class="card-header p-0" id="headingNine" role="tab">
+                <h2 class="mb-0">
+                  <button href="#collapseNine"
+                    class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed"
+                    data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="collapseNine">
+                    <p class="mb-0 question" style="color:#f4f8fa; font-weight:600;">Reason 5</p>
+                    <i class="fa" aria-hidden="true" style="color:#006d95;"></i>
+                  </button>
+                </h2>
+              </div>
+              <div class="collapse" id="collapseNine" role="tabpanel" aria-labelledby="headingNine">
+                <div class="card-body py-3 px-0">
+                  <h6  class="px-4" style="font-weight:550;">What are people saying about you when you're not around? Are you aware?</h6>
+                  <p class="px-4" style="text-align: justify; font-weight:500; word-spacing: normal;">
+                    "Invest in your
+                    employees, reap the rewards."
+                    A strong corporate brand is built on the foundation of empowered and valued employees who, in turn,
+                    enhance your customer experience.
+                  </p>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+       
+        
+        <div class="col-lg-6 pl-lg-5  wow column2 " data-wow-delay="0.6s">
+          <div id="accordion" class="myaccordion w-100 mt-5" aria-multiselectable="true">
+            <div class="card m-2 shadow" data-aos="fade-left" data-aos-duration="1000">
+              <div class="card-header p-0" id="headingTen" role="tab">
+                <h2 class="mb-0">
+                  <button href="#collapseTen"
+                    class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed"
+                    data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="collapseTen">
+                    <p class="mb-0 question" style="color:#f4f8fa; font-weight:600;">Reason 6</p>
+                    <i class="fa" aria-hidden="true" style="color:#006d95;"></i>
+                  </button>
+                </h2>
+              </div>
+              <div class="collapse" id="collapseTen" role="tabpanel" aria-labelledby="headingTen">
+                <div class="card-body py-3 px-0">
+                  <h6  class="px-4" style="font-weight:550;">What are your customers saying about your employees?</h6>
+                  <p class="px-4" style="text-align: justify; font-weight:500; word-spacing: normal;">
+                    "Dress the part, make an impact."
+                    Your attire speaks volumes about your credibility, trustworthiness, and intelligence. Each profession has its
+                    own expectations for professional attire
+                  </p>
+  
+                </div>
+              </div>
+            </div>
+            <div class="card m-2 shadow" data-aos="fade-left" data-aos-duration="1000">
+              <div class="card-header p-0" id="headingFive">
+                <h2 class="mb-0">
+                  <button href="#collapseFive"
+                    class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed"
+                    data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="collapseFive">
+                    <p class="mb-0 question" style="color:#f4f8fa; font-weight:600;">Reason 7</p>
+                    <i class="fa" aria-hidden="true" style="color:#006d95;"></i>
+                  </button>
+                </h2>
+              </div>
+              <div class="collapse" id="collapseFive" role="tabpanel" aria-labelledby="headingOne">
+                <div class="card-body py-3 px-0">
+                  <h6 class="px-4" style="font-weight:550;">What message do your clothes convey? Do they align with your customers' expectations?</h6>
+                  <p class="px-4" style="text-align: justify;  word-spacing: normal;">
+                    "Unlock
+  your brand's potential with expert guidance."
+                  </p>
+  
+                </div>
+              </div>
+            </div>
+  
+            <div class="card m-2 shadow" data-aos="fade-left" data-aos-duration="1500">
+              <div class="card-header p-0" id="headingSix" role="tab">
+                <h2 class="mb-0">
+                  <button href="#collapseSix"
+                    class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed"
+                    data-parent="#accordion" data-toggle="collapse" aria-expanded="false" aria-controls="collapseTwo">
+                    <p class="mb-0 question" style="color:#f4f8fa; font-weight:600;">Reason 8
+                    </p>
+                    <i class="fa" aria-hidden="true" style="color:#006d95;"></i>
+                  </button>
+                </h2>
+              </div>
+              <div class="collapse" id="collapseSix" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="card-body py-3 px-0">
+                  <h6  class="px-4" style="font-weight:550;">Have you considered seeking professional assistance in these areas?</h6>
+                  <p class="px-4" style="text-align: justify; font-size:16px; word-spacing: normal;">
+                    "Shape perceptions, shape your
+                    future."
+                    Recognize the importance of personal branding in shaping how others perceive you, paving the way for
+                    future opportunities.
+                  </p>
+  
+                </div>
+              </div>
+            </div>
+  
+            <div class="card m-2 shadow" data-aos="fade-left" data-aos-duration="2000">
+              <div class="card-header p-0" id="headingSeven" role="tab">
+                <h2 class="mb-0">
+                  <button href="#collapseSeven"
+                    class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed"
+                    data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="collapseThree">
+                    <p class="mb-0 decoration question" style="color:#f4f8fa; font-weight:600;">Reason 9 </p>
+                    <i class="fa" aria-hidden="true" style="color:#006d95;"></i>
+                  </button>
+                </h2>
+              </div>
+              <div class="collapse" id="collapseSeven" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="card-body py-3 px-0">
+                  <h6 class="px-4" style="font-weight:550;">Have you actively worked on shaping your personal brand?</h6>
+                  <p class="px-4" style="text-align: justify; font-weight:500; word-spacing: normal;">
+                    "Elevate your brand with professional
+                    expertise."
+                  </p>
+                 
+                </div>
+              </div>
+            </div>
+  
+            <div class="card m-2 shadow" data-aos="fade-left" data-aos-duration="2500">
+              <div class="card-header p-0" id="headingEight" role="tab">
+                <h2 class="mb-0">
+                  <button href="#collapseEight"
+                    class="d-flex py-3 px-4 align-items-center justify-content-between btn btn-link collapsed"
+                    data-parent="#accordion" data-toggle="collapse" aria-expanded="false"
+                    aria-controls="collapseFour">
+                    <p class="mb-0 question" style="color:#f4f8fa; font-weight:600;"> Reason 10</p>
+                    <i class="fa" style="color:#006d95;" aria-hidden="true"></i>
+                  </button>
+                </h2>
+              </div>
+              <div class="collapse" id="collapseEight" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="card-body py-3 px-0">
+                  <h6 class="px-4" style="font-weight:550">Have you ever explored the benefits of brand consulting, personal branding, and image consulting services to
+                    enhance your brand's impact and resonance?</h6>
+                  <p class="px-4" style="text-align: justify; font-weight:500; word-spacing: normal;">"Embrace the power of strategic guidance".</p>
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+     
+     
+      
+      
+     
+    
+    </div>
+  </div>
+</div>
+<!-- end fqcs section -->
+
+      <!-- =====================================     my lindedin       ========================= -->
+      <div class="unslate_co--section section-counter  mb-5" id="skills-section">
+        <div class="container">
+          <div class="section-heading-wrap text-center mb-5">
+            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Social Meet</span></h2>
+            <span class="gsap-reveal"><img src="{% static 'assets/images/divider.png' %}" alt="divider" width="76"></span>
+          </div>
+          <div class="row linkedin">
+            
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center align-items-center">
+                <div class="card" style="width: 25rem;">
+                  <div class="card-header pb-5">
+                      <h2 style="color:white; font-weight:550;">Linked<span class="in-text">in</span></h2> 
+                  </div>
+                  <div class="card-body" style="background-color: rgb(245, 240, 240); color:rgb(3, 3, 3); border-radius: 10px !important;">
+                     <img src="{% static 'assets/images/itsnsandeep-sandeep.jfif' %}" class="card-img-top" alt="...">
+                    <h5 class="card-title">Sandeep N</h5>
+                    <p class="card-text">Founder - Magsmen || Making Businesses Bigger and personalities popular || Brand & Image consultant</p>
+                      <button class="btn btn-profile"><a href="https://www.linkedin.com/in/itsnsandeep/?trk=public-profile-badge-profile-badge-view-profile-cta&originalSubdomain=in" target="_blank" class="btn btn-primary">View Profile</a></button>
+                  </div>
+                </div>
+                 <!-- <div class="badge-base LI-profile-badge container" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="jimmyylim" data-version="v1">
+                  <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/jimmyylim?trk=profile-badge">Jimmy Lim</a>
+                </div>
+               -->
+              
+              </div>
+                    
+          </div>
+        </div>
+    </div>
+      <!-- END .linked in -->
+
+<!-- =====================================     happy clients        ========================= -->
+<div class="unslate_co--section" id="testimonial-section">
+  <div class="container">
+    <div class="section-heading-wrap text-center mb-5">
+      <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">My Happy Clients</span></h2>
+      <span class="gsap-reveal"><img src="{% static 'assets/images/divider.png' %}" alt="divider" width="76"></span>
+    </div>
+  </div>
+
+  <div class="owl-carousel testimonial-slider">
+    
+     
+      <div class="testimonial-v1">
+        <div class="testimonial-inner-bg">
+          <span class="quote">&ldquo;</span>
+          <blockquote>
+            
+            Sandeep has been an incredible asset to our brand. From introducing a new phase of Tenali Double Horse to managing time effectively and being transparent with us every step of the way, they have truly exceeded expectations. We're 1.5 years into our journey and couldn't be more pleased with the results! Sandeep is an experienced professional who has brought value and success to our brand.
+          
+          </blockquote>
+        </div>
+        
+        <div class="testimonial-author-info">
+          <img src="{% static 'assets/media/uploads/itsnsandeep-tenalidh-400x450.png' %}" alt="Image" height="100px" width="100px">
+          <h3>Tenali double horse</h3>
+        </div>
+      </div>
+
+      <div class="testimonial-v1">
+        <div class="testimonial-inner-bg">
+          <span class="quote">&ldquo;</span>
+          <blockquote>
+            
+            Telugu Foods had a remarkable experience with Sandeep's brand consulting and digital strategy services. His tailored approach and practical strategies helped us launch combos across all mediums, increase distribution leads and boost our brand visibility to get closer to our customers in less than two months. We are extremely satisfied with the exceptional results of his services and would highly recommend him to others seeking similar solutions.
+          
+          </blockquote>
+        </div>
+        
+        <div class="testimonial-author-info">
+          <img src="{% static 'assets/media/uploads/itsnsandeep-telugu-foods-logo.png' %}" alt="Image" height="100px" width="100px">
+          <h3>Telugu Foods</h3>
+        </div>
+      </div>
+     
+      <div class="testimonial-v1">
+        <div class="testimonial-inner-bg">
+          <span class="quote">&ldquo;</span>
+          <blockquote>
+            
+            Working with Sandeep and their team was an incredible experience. They introduced us to the concept of brand architecture, which has resulted in a new, enhanced strategy for VSB Group. We've experienced a major boost in our corporate rebranding, linkedin follower growth, external stakeholder praise and product visuals. The team's attention to detail and professionalism have been invaluable.
+          
+          </blockquote>
+        </div>
+        
+        <div class="testimonial-author-info">
+          <img src="{% static 'assets/media/uploads/itsnsandeep-vsb-logo-400x450.png' %}" alt="Image" height="100px" width="100px">
+          <h3>VSB Group</h3>
+        </div>
+      </div>
+  
+  </div>
+</div>
+<!-- END testimonial -->
+
+
+
+      <!-- =====================================    my journals     ========================= -->
+      <div class="unslate_co--section" id="journal-section">
+        <div class="container">
+          <div class="section-heading-wrap text-center mb-5">
+            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Blogs</span></h2>
+            <span class="gsap-reveal"><img src="{% static 'assets/images/divider.png' %}" alt="divider" width="76"></span>
+          </div>
+
+          
+          <div class="row gutter-v4 align-items-stretch">
+        
+            {% for item in oBlogs %}
+            <div class="col-sm-6 col-md-4 col-lg-4 blog-post-entry" data-aos="fade-up" data-aos-delay="0">
+              <a href="/blog-details/{{item.Sluglink}}" class="grid-item blog-item w-100 h-100" >
+                <div class="overlay">
+                  <div class="portfolio-item-content bolog-card">
+                    <h3 style="color:#D63447;  font-weight:600;">{{item.First_title}}</h3>
+                    <p class="post-meta"  style="color:#D63447;">{{item.Name}}<span class="small"> &bullet;  {{item.Create_at}}</span></p>
+                  </div>
+                </div>
+                <img src="{{item.Image1.url}}" class="lazyload" alt="Image" />
+              </a>
+
+            </div>
+            {% endfor %}
+            <div class="blogs-btn">
+              <a href="/blogs/"><button class="btn btn-danger mt-4">More Blogs</button></a>
+            </div>
+
+                  <nav aria-label="Page navigation conatiner">
+                    <ul class="pagination justify-content-center">
+                    
+                        <!-- <li><a href="?page={{ post.previous_page_number }}" class="page-link" >&laquo; PREV </a></li> -->
+                      
+                        <!-- <li><a href="?page={{ post.next_page_number }}" class="page-link"> NEXT &raquo;</a></li> -->
+              
+                    </ul>
+                  </nav>
+          </div>
+        </div>
+      </div>
+      <!-- END blog posts -->
+
+<!-- =====================================    contact       ========================= -->
+      <div class="unslate_co--section" id="contact-section">
+        <div class="container">
+          <div class="section-heading-wrap text-center mb-5">
+            <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Get In Touch</span></h2>
+            <span class="gsap-reveal"><img src="{% static 'assets/images/divider.png' %}" alt="divider" width="76"></span>
+          </div>
+
+          <div class="row justify-content-between">
+            
+            <div class="col-md-6">
+              <form method="post" class="form-outline-style-v1" id="contactForm">
+                {% csrf_token %}
+                <div class="form-group row mb-0">
+
+                  <div class="col-lg-6 form-group gsap-reveal">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" class="form-control" id="name">
+                  </div>
+                  <div class="col-lg-6 form-group gsap-reveal">
+                    <label for="email">Email</label>
+                    <input name="email" type="email" class="form-control" id="email">
+                  </div>
+                  <div class="col-lg-12 form-group gsap-reveal">
+                    <label for="message">Write your message...</label>
+                    <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
+                  </div>
+                </div>
+
+                <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+                
+                <!-- 6Lfgj00jAAAAAC0giK_HzP_y-WdN4CrYTbz67og1 -->
+              <!-- <div class="g-recaptcha px-3 mb-5" data-sitekey="6Lfl93YjAAAAAH5mfZhEeFMvT4-zaCZhD8NUBk8x" required></div> -->
+
+                <div class="form-group row gsap-reveal">
+                    <div class="col-md-12 d-flex align-items-center">
+                      <input type="submit" class="btn btn-outline-pill btn-custom-light mr-3" value="Send Message">
+                      <span class="submitting"></span>
+                    </div>
+                  </div>
+              </form>
+              <div id="form-message-warning" class="mt-4"></div> 
+              <div id="form-message-success">
+                Your message was sent, thank you!
+              </div>
+
+            </div>
+
+            <div class="col-md-4">
+              <div class="contact-info-v1">
+                <div class="gsap-reveal d-block">
+                  <span class="d-block contact-info-label">Email</span>
+                  <a href="mailto:connect@itsnsandeep.com" class="contact-info-val">connect@itsnsandeep.com</a>
+                </div>
+                <div class="gsap-reveal d-block">
+                  <span class="d-block contact-info-label">Phone</span>
+                  <a href="tel:9044910449" class="contact-info-val">+91 9044910449</a>
+                </div>
+                <div class="gsap-reveal d-block">
+                  <span class="d-block contact-info-label">Address</span>
+                  <address class="contact-info-val">Unit No.202,2nd Floor, M Square Building, Street No. 1, Patrika Nagar, Hyderabad - 500 081 Telangana.</address>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      </div> 
+
+    {% endblock %}
