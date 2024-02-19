@@ -14,7 +14,6 @@ def index(request):
     oPortfolio = Portfolio.objects.all()
     oBlogs = Blogs.objects.all()[:3]
     
-
     #Contact 
     if request.method == "POST":
         name = request.POST.get('name',"")
@@ -73,4 +72,3 @@ def educational_institutions(request):
 
 def corporate_solutions_personal_branding(request):
     return render(request, 'uifiles/corporate-solutions-personal-branding-mastery-workshops-for-corporate-success.html')
-
