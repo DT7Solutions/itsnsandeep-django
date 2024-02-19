@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.shortcuts import render
-from .models import Blogs,Contact,Banner
+from .models import About, Blogs,Contact,Banner,Portfolio
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.core.mail import send_mail
 
@@ -9,8 +9,11 @@ from django.core.mail import send_mail
 
 
 def index(request):
-    oBlogs = Blogs.objects.all()[:3]
     oBanner = Banner.objects.first()
+    oAbout = About.objects.all()
+    oPortfolio = Portfolio.objects.all()
+    oBlogs = Blogs.objects.all()[:3]
+    
 
     #Contact 
     if request.method == "POST":
@@ -34,12 +37,12 @@ def index(request):
             print(messages)
         except:
             messages.error(request,'your emails sending fail')
-    return render(request, 'uifiles/index.html',{'oBlogs':oBlogs,'oBanner':oBanner})
+    return render(request, 'uifiles/index.html',{'oBanner':oBanner,'oAbout':oAbout,'oPortfolio':oPortfolio,'oBlogs':oBlogs,})
 
 
 def blogs(request):
     blog_items =Blogs.objects.all()
-    paginator = Paginator( blog_items, 3) 
+    paginator = Paginator( blog_items, 2) 
 
     page = request.GET.get('page')
     try:
@@ -51,7 +54,9 @@ def blogs(request):
         # If page is out of range deliver last page of results
         post = paginator.page(paginator.num_pages)
     
-    return render(request,'uifiles/blogs.html',{'blog_items':blog_items,'page':page})
+    return render(request,'uifiles/blogs.html',{'blog_items':blog_items,'page':page,'post':post})
+
+
 
 def blog_details(request,slug):
     blog_posts = Blogs.objects.get(Sluglink=slug)
@@ -68,3 +73,4 @@ def educational_institutions(request):
 
 def corporate_solutions_personal_branding(request):
     return render(request, 'uifiles/corporate-solutions-personal-branding-mastery-workshops-for-corporate-success.html')
+

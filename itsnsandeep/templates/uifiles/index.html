@@ -38,7 +38,6 @@
           <div id="portfolio-single-holder"></div>
 
           <div class="portfolio-wrapper">
-
             <div class="section-heading-wrap text-center mb-5">
               <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Portfolio</span></h2>
               <span class="gsap-reveal"><img src="{% static 'assets/images/divider.png' %}" alt="divider" width="76"></span>
@@ -47,58 +46,21 @@
 
             
             <div id="posts" class="row gutter-isotope-item">
-              
+              {% for portfolio_info in oPortfolio %}
               <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
                 <a href="portfolio-single-3.html" class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
                     <div class="overlay">
                       <span class="wrap-icon icon-link2"></span>
                       <div class="portfolio-item-content">
-                        <h3>"CEO & Business Owner Personal Branding"</h3>
-                        <p>Build your personal brand</p>
+                        <h3>{{portfolio_info.Port_Title}}</h3>
+                        <p>{{portfolio_info.Port_Description}}</p>
                       </div>
                     </div>
-                    <img src="{% static 'assets/media/uploads/itsnsandeep-business-owners.png' %}" class="lazyload  img-fluid" alt="Images" />
+                    <img src="{{portfolio_info.Portfolio_Image.url}}" class="lazyload  img-fluid" alt="Images" />
                   </a>
               </div>
+              {% endfor %}
 
-              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a href="portfolio-single-3.html" class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
-                    <div class="overlay">
-                      <span class="wrap-icon icon-link2"></span>
-                      <div class="portfolio-item-content">
-                        <h3>"Celebpreneur Transformation"</h3>
-                        <p>Lets you brand bigger with right plan</p>
-                      </div>
-                    </div>
-                    <img src="{% static 'assets/media/uploads/itsnsandeep-celebprenenur-transformation_11zon.jpg' %}" class="lazyload  img-fluid" alt="Images" />
-                  </a>
-              </div>
-
-              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a href="portfolio-single-3.html" class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
-                    <div class="overlay">
-                      <span class="wrap-icon icon-link2"></span>
-                      <div class="portfolio-item-content">
-                        <h3>"Corporate Workshops"</h3>
-                        <p>Bill you image to reach you mark</p>
-                      </div>
-                    </div>
-                    <img src="{% static 'assets/media/uploads/tsnsandeep-corporate-solutions-personal-branding-mastery-workshops-for-corporate-success_11zon.jpg' %}" class="lazyload  img-fluid" alt="Images" />
-                  </a>
-              </div>
-
-              <div class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-                <a href="portfolio-single-3.html" class="portfolio-item ajax-load-page isotope-item gsap-reveal-img" data-id="1">
-                    <div class="overlay">
-                      <span class="wrap-icon icon-link2"></span>
-                      <div class="portfolio-item-content">
-                        <h3>"Educational Institutions Workshops"</h3>
-                        <p>Build a brand with you the personal banding</p>
-                      </div>
-                    </div>
-                    <img src="{% static 'assets/media/uploads/itsnsandeep-educational-institutions.jpg' %}" class="lazyload  img-fluid" alt="Images" />
-                  </a>
-              </div>
             </div>
             
           </div>
@@ -129,29 +91,22 @@
             <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">About Me</span></h2>
             <span class="gsap-reveal"><img src="{% static 'assets/images/divider.png' %}" alt="divider" width="76"></span>
           </div>
-      
-      
-         
+
           <div class="row mt-5 justify-content-between">
+            {% for about_info in oAbout %}
             <div class="col-lg-6 mb-5 mb-lg-0">
               <figure class="dotted-bg gsap-reveal-img ">
-                <img src="{% static 'assets/media/uploads/sandeep.jpeg' %}" alt="Image" class="img-fluid">
+                <img src="{{about_info.About_Image.url}}" alt="Image" class="img-fluid">
               </figure>
             </div>
             <div class="col-lg-6 pr-lg-5">
-              <h3 class="mb-4 heading-h3"><span class="gsap-reveal">The Alchemist of Personal Brands: Sandeep N's Magical Touch</span></h3>
-              <p class="lead" style="text-align: justify;">With nearly 7 years of extensive research & experience, Sandeep is a trusted name in brand consulting. As
-                the founder of Magsmen, he has earned accolades for his creative strategies and unparalleled efficiency.
-                Working with top-tier organizations, Sandeep has left indelible impressions on customers and fueled business
-                growth. With expertise spanning industries, he delivers impactful brand strategies for technology, FMCG,
-                retail, and more. In addition, Sandeep collaborated with TFI celebrities, conducts training sessions for
-                corporates, employees, and educational institutions. A visionary leader, Sandeep's unwavering commitment
-                and remarkable track record make him a true powerhouse in brand consulting.</p>
+              <h3 class="mb-4 heading-h3"><span class="gsap-reveal">{{about_info.About_Title}}</span></h3>
+              <p class="lead" style="text-align: justify;">{{about_info.About_Long_Desc}}</p>
               <!-- <p class="gsap-reveal"><a href="#" class="btn btn-outline-pill btn-custom-light">Know More</a></p> -->
             </div>
-          </div>
-         
-      
+            {% endfor %}
+          </div> 
+          
         </div>
       </div>
   <!-- =====================================     whysandeep       ========================= -->
@@ -708,7 +663,6 @@
             <div class="blogs-btn">
               <a href="/blogs/"><button class="btn btn-danger mt-4">More Blogs</button></a>
             </div>
-
                   <nav aria-label="Page navigation conatiner">
                     <ul class="pagination justify-content-center">
                     

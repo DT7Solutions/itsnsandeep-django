@@ -2,11 +2,11 @@
 {% load static %}
 {% block content %}
 
-<div class="unslate_co--section unslate_co--site-inner" id="journal-section">
+<div class="unslate_co--section unslate_co--site-inner bg-dark" id="journal-section">
   <div class="container">
     <div class="section-heading-wrap text-center mb-5">
-      <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Blogs</span></h2>
-      <span class="gsap-reveal"><img src="{% static 'assets/images/divider.png' %}" alt="divider" width="76"></span>
+      <h2 class="heading-h2 heading-title text-center divider"><span class="gsap-reveal">Blogs</span></h2>
+      <span class="gsap-reveal"><img src="{% static 'assets/images/white-divider.png' %}" alt="divider" width="76"></span>
     </div>
 
     
@@ -26,19 +26,33 @@
       </div>
       {% endfor %}
 
-            <nav aria-label="Page navigation conatiner">
-              <ul class="pagination justify-content-center">
-              
-                  <!-- <li><a href="?page={{ post.previous_page_number }}" class="page-link" >&laquo; PREV </a></li>
-                
-                  <li><a href="?page={{ post.next_page_number }}" class="page-link"> NEXT &raquo;</a></li> -->
-        
-              </ul>
-            </nav>
+          
+
     </div>
-    <div class="blogs-btn">
+    <div class="row">
+      <div class="col-lg-12">
+        {% if post.has_other_pages %}
+      <nav aria-label="Page navigation conatiner">
+        <ul class="pagination d-flex justify-content-center">
+          {% if post.has_previous %}
+            <li class="px-3"><a href="?page={{ post.previous_page_number }}" class="page-link" >&laquo; PREV </a></li>
+          {% endif %}
+          <!-- <span class="current-page px-3">
+            <span class="no-of-page">{{ post.number }} </span> &nbsp; of {{ post.paginator.num_pages }}
+         </span> -->
+
+          {% if post.has_next %}
+            <li><a href="?page={{ post.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    {% endif %}
+      </div>
+
+    </div>
+    <!-- <div class="blogs-btn">
       <a href="/"><button class="btn btn-danger mt-4">Back To Home</button></a>
-    </div>
+    </div> -->
   </div>
 </div>
 

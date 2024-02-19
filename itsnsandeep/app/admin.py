@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category,Tags,Blogs,Contact,Banner
+from .models import Category,Tags,Blogs,Contact,Banner,Portfolio,About
 # Register your models here.
 
 
@@ -21,8 +21,21 @@ class AdminContact(admin.ModelAdmin):
     list_display=('Id','Name','Email' ,'Message')
 
 
+class AdminPortfolio(admin.ModelAdmin):
+    list_display = ['Port_Title','Port_Description','Portfolio_Image']
+
+
+class AdminAbout(admin.ModelAdmin):
+    list_display = ['About_Title','About_Long_Desc','About_Image']
+
+
+
+
 admin.site.register(Banner,AdminBanner)
 admin.site.register(Category,AdminCategory)
-admin.site.register(Tags,AdminTags)
+# admin.site.register(Tags,AdminTags)
 admin.site.register(Blogs,AdminBlogs)
 admin.site.register(Contact,AdminContact)
+admin.site.register(Portfolio,AdminPortfolio)
+admin.site.register(About,AdminAbout)
+

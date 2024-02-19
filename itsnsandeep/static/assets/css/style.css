@@ -2298,3 +2298,8 @@ small {
 .unslate_co--footer a{
   color: #212f3a !important;
 }
+
+.unslate_co--section .heading-title{
+  color: #fff;
+  margin-top: 70px;
+}

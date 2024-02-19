@@ -50,3 +50,25 @@ class Contact(models.Model):
 
         def __str__(self):
             return self.Name
+
+
+class Portfolio(models.Model):
+     Port_Title = models.CharField(max_length=200)
+     Port_Description = models.CharField(max_length=300)
+     Portfolio_Image = models.ImageField(upload_to='uploads/')
+
+
+     def __str__(self):
+          return self.Port_Title
+     
+
+class About(models.Model):
+     About_Title = models.CharField(max_length=200)
+     About_Long_Desc = models.CharField(max_length=2000)
+     About_Image = models.ImageField(upload_to='uploads/')
+
+     def __str__(self) -> str:
+          return self.About_Title
+
+     
+     
